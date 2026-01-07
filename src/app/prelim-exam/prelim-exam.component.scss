@@ -1,0 +1,75 @@
+section {
+ max-width: 1200px;
+ width: 100%;
+ margin: 0 auto;
+}
+
+
+.grid-container {
+ display: grid;
+ grid-template-columns: repeat(10, 1fr);
+ gap: 10px;
+ padding: 1.5rem;
+}
+
+
+.grid-item {
+ border: 1px solid #d3d3d3;
+ border-radius: 8px;
+ background-color: #dedede;
+ padding: 1.5rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ min-height: 80px;
+}
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+
+body {
+ font-family: Arial, sans-serif;
+ font-size: 16px;
+ line-height: 1.5;
+ color: #333;
+ background-color: #f5f5f5;
+}
+/* Default grid layout (for large screens by default, before media queries) */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* default to 8 per row */
+  gap: 10px;
+}
+
+/* Phase 1 — Desktop layout */
+/* Applies when screen width is 920px or less */
+@media only screen and (max-width: 920px) {
+  .grid-container {
+    grid-template-columns: repeat(8, 1fr); /* 8 items per row */
+    background-color: #2A4D69; /* medium blue (hex), not too bright */
+    color: #F0F8FF; /* light text that compliments blue */
+  }
+}
+
+/* Phase 2 — Tablet layout */
+/* Applies when screen width is 756px or less */
+@media only screen and (max-width: 756px) {
+  .grid-container {
+    grid-template-columns: repeat(6, 1fr); /* 6 items per row */
+    background-color: #3A6F41; /* medium green (hex), not too bright */
+    color: #FAF9F6; /* light text that compliments green */
+  }
+}
+
+/* Phase 3 — Mobile layout */
+/* Applies when screen width is 460px or less */
+@media only screen and (max-width: 460px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 item per row */
+    background-color: #A03A2E; /* medium red (hex), not too bright */
+    color: #FFFFFF; /* light text that compliments red */
+  }
+}
