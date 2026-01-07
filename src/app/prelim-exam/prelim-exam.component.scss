@@ -37,39 +37,33 @@ body {
  color: #333;
  background-color: #f5f5f5;
 }
-/* Default grid layout (for large screens by default, before media queries) */
+
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(8, 1fr); /* default to 8 per row */
+  grid-template-columns: repeat(8, 1fr);
   gap: 10px;
 }
 
-/* Phase 1 — Desktop layout */
-/* Applies when screen width is 920px or less */
 @media only screen and (max-width: 920px) {
   .grid-container {
-    grid-template-columns: repeat(8, 1fr); /* 8 items per row */
-    background-color: #2A4D69; /* medium blue (hex), not too bright */
-    color: #F0F8FF; /* light text that compliments blue */
+    grid-template-columns: repeat(8, 1fr); 
+    background-color: #2A4D69; 
+    color: #F0F8FF; 
   }
 }
 
-/* Phase 2 — Tablet layout */
-/* Applies when screen width is 756px or less */
 @media only screen and (max-width: 756px) {
   .grid-container {
-    grid-template-columns: repeat(6, 1fr); /* 6 items per row */
-    background-color: #3A6F41; /* medium green (hex), not too bright */
-    color: #FAF9F6; /* light text that compliments green */
+    grid-template-columns: repeat(6, 1fr); 
+    background-color: #3A6F41; 
+    color: #FAF9F6; 
   }
 }
 
-/* Phase 3 — Mobile layout */
-/* Applies when screen width is 460px or less */
 @media only screen and (max-width: 460px) {
   .grid-container {
-    grid-template-columns: 1fr; /* 1 item per row */
-    background-color: #A03A2E; /* medium red (hex), not too bright */
-    color: #FFFFFF; /* light text that compliments red */
+    grid-template-columns: 1fr; 
+    background-color: #A03A2E; 
+    color: #FFFFFF; 
   }
 }
