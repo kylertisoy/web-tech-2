@@ -1,0 +1,138 @@
+/* =================================
+   GLOBAL RESET & BASE STYLES
+   Consistent look across the app
+================================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #eef2f7; // light IT dashboard background
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: #1f2937;
+}
+
+/* =================================
+   TOP HEADER
+   System title / module name
+================================= */
+.header {
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  padding: 1.3rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* =================================
+   MAIN CONTENT WRAPPER
+================================= */
+.main-container {
+  width: 92%;
+  max-width: 780px;
+  margin: 2.8rem auto;
+}
+
+/* =================================
+   TITLE BAR + ACTION BUTTON
+================================= */
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.4rem;
+}
+
+.title-bar h2 {
+  margin: 0;
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+
+/* =================================
+   ADD STUDENT BUTTON
+================================= */
+.add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px; // pill style
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 6px 14px rgba(22, 163, 74, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.add-btn::before {
+  content: "+";
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(22, 163, 74, 0.45);
+}
+
+/* =================================
+   STUDENT INFO CARD
+================================= */
+.student-card {
+  background: #ffffff;
+  padding: 1.3rem 1.5rem;
+  border-radius: 14px;
+  margin-bottom: 1.1rem;
+  position: relative;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.student-card .student-name {
+  margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.student-card p {
+  margin: 0.3rem 0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+/* =================================
+   DELETE ACTION
+================================= */
+.btn-delete {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  background: #ef4444;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.35);
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-delete:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
